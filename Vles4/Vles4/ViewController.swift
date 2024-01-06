@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         enum Films: String {
             case film1 = "Spider Man"
             case film2 = "Young Sheldon"
-            case film3 = "Harry Potter"
+            case film3 = "How I Met Your Mother"
         }
         
         let alert = UIAlertController(title: nil, message: "Choose Film", preferredStyle: .actionSheet)
