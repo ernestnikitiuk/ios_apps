@@ -9,9 +9,9 @@ import UIKit
 
 class MyTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var myTitleLableOnCell: UILabel!
+    @IBOutlet weak var myTitleLabel: UILabel!
     
-    @IBOutlet weak var my2ndTitleLableOnCell: UILabel!
+    @IBOutlet weak var myBodyLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,7 +23,7 @@ class MyTableViewCell: UITableViewCell {
 //    }
     
     func configure (_ post: Post){
-        myTitleLableOnCell.text = post.title
-        my2ndTitleLableOnCell.text = post.body
+        myTitleLabel.text = post.title
+        myBodyLabel.text = post.body
     }
 }
