@@ -1,13 +1,13 @@
 //
 //  NetworkManager.swift
-//  networking learn
+//  Test
 //
-//  Created by Erik on 24.01.2024.
+//  Created by Erik on 27.01.2024.
 //
 
 import Foundation
 
-struct NetworkManager {
+ class NetworkManager {
     
     let baseURL = "https://jsonplaceholder.typicode.com"
     

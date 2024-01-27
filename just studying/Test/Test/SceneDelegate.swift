@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  networking learn
+//  Test
 //
-//  Created by Erik on 16.01.2024.
+//  Created by Erik on 27.01.2024.
 //
 
 import UIKit
