@@ -7,20 +7,20 @@
 
 import Foundation
 
- class NetworkManager {
-     
-     enum HTTPMethod: String {
-         case POST
-         case PUT
-         case GET
-         case DELETE
-     }
-     
-     enum APIs: String {
-         case posts
-         case users
-         case comments
-     }
+class NetworkManager {
+    
+    enum HTTPMethod: String {
+        case POST
+        case PUT
+        case GET
+        case DELETE
+    }
+    
+    enum APIs: String {
+        case posts
+        case users
+        case comments
+    }
     
     let baseURL = "https://jsonplaceholder.typicode.com/"
     
@@ -36,36 +36,41 @@ import Foundation
                         completionHandler(posts ?? [])
                     }
                 }
-                          
+                
             }.resume()
         }
     }
-     
-     func postCreatePost (_ post: Post, completionHandler: @escaping () -> Void) {
-         guard let url = URL(string: baseURL + APIs.posts.rawValue),
-         let data = try? JSONEncoder().encode(post) else {
-             return
-         }
-         
-         //let request = MutableURLRequest(url: url)
-         //request.httpMethod = HTTPMethod.POST.rawValue
-         var request = URLRequest(url: url)
-         request.httpMethod = HTTPMethod.POST.rawValue
-         request.httpBody = data
-         request.setValue("\(data.count)", forHTTPHeaderField: "Content-Length")
-         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-          
-         URLSession.shared.dataTask(with: request) { data, response, error in
-             if error != nil {
-                 print("error")
-             } else if let resp = response as? HTTPURLResponse,
-                 resp.statusCode == 201, let responseData = data {
-                 let json = try? JSONSerialization.jsonObject(with: responseData)
-                 print(json)
-                completionHandler()
-             }
-         }
-         
+    
+    func postCreatePost (_ post: Post, completionHandler: @escaping (Post) -> Void) {
+        guard let url = URL(string: baseURL + APIs.posts.rawValue),
+              let data = try? JSONEncoder().encode(post) else {
+            return
+        }
+        
+        //let request = MutableURLRequest(url: url)
+        //request.httpMethod = HTTPMethod.POST.rawValue
+        var request = URLRequest(url: url)
+        request.httpMethod = HTTPMethod.POST.rawValue
+        request.httpBody = data
+        request.setValue("\(data.count)", forHTTPHeaderField: "Content-Length")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if error != nil {
+                print("error")
+            } else if let resp = response as? HTTPURLResponse,
+                    resp.statusCode == 201, let responseData = data {
+//                let json = try? JSONSerialization.jsonObject(with: responseData)
+//                print(json)
                 
-     }
+                if let responsePost = try? JSONDecoder().decode(Post.self, from: responseData){
+                    completionHandler(responsePost)
+                }
+                
+                
+            }
+        }.resume()
+        
+        
+    }
 }

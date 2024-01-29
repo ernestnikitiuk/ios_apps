@@ -39,7 +39,21 @@ class ViewController: UIViewController {
             }
         }
     }
-
+    @IBAction func createPost(_ sender: Any) {
+        
+        var post = Post(userId: 2, id: 1, title: "Time to write", body: "Wwerwerwerd fsdfsfdsf sdfsdfrewr sdsfdg s")
+        
+        networkManager.postCreatePost(post) { serverPost in
+            post.id = serverPost.id
+            DispatchQueue.main.async {
+                let alert = UIAlertController(title: "Great", message: "Your Post has been created", preferredStyle: .alert)
+                self.present(alert, animated: true)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    alert.dismiss(animated: true)
+                }
+            }
+        }
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{

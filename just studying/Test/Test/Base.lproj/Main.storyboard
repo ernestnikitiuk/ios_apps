@@ -31,7 +31,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="J8L-P4-0gG">
-                        <barButtonItem key="rightBarButtonItem" title="Create Post" id="89j-MY-Du3"/>
+                        <barButtonItem key="rightBarButtonItem" title="Create Post" id="89j-MY-Du3">
+                            <connections>
+                                <action selector="createPost:" destination="BYZ-38-t0r" id="oGx-94-4VN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="myTableView" destination="WDF-cQ-q6o" id="rhI-Vw-QKl"/>
