@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		03CCC36D2B65245F006B6210 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03CCC36D2B65245F006B6210 /* Networking Testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Networking Testing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03CCC3702B65245F006B6210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03CCC3722B65245F006B6210 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		03CCC3742B65245F006B6210 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		03CCC36E2B65245F006B6210 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				03CCC36D2B65245F006B6210 /* Test.app */,
+				03CCC36D2B65245F006B6210 /* Networking Testing.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,9 +82,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		03CCC36C2B65245F006B6210 /* Test */ = {
+		03CCC36C2B65245F006B6210 /* Networking Testing */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 03CCC3812B652461006B6210 /* Build configuration list for PBXNativeTarget "Test" */;
+			buildConfigurationList = 03CCC3812B652461006B6210 /* Build configuration list for PBXNativeTarget "Networking Testing" */;
 			buildPhases = (
 				03CCC3692B65245F006B6210 /* Sources */,
 				03CCC36A2B65245F006B6210 /* Frameworks */,
@@ -94,9 +94,9 @@
 			);
 			dependencies = (
 			);
-			name = Test;
+			name = "Networking Testing";
 			productName = Test;
-			productReference = 03CCC36D2B65245F006B6210 /* Test.app */;
+			productReference = 03CCC36D2B65245F006B6210 /* Networking Testing.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -114,7 +114,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 03CCC3682B65245F006B6210 /* Build configuration list for PBXProject "Test" */;
+			buildConfigurationList = 03CCC3682B65245F006B6210 /* Build configuration list for PBXProject "Networking Testing" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -127,7 +127,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				03CCC36C2B65245F006B6210 /* Test */,
+				03CCC36C2B65245F006B6210 /* Networking Testing */,
 			);
 		};
 /* End PBXProject section */
@@ -355,7 +355,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		03CCC3682B65245F006B6210 /* Build configuration list for PBXProject "Test" */ = {
+		03CCC3682B65245F006B6210 /* Build configuration list for PBXProject "Networking Testing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				03CCC37F2B652461006B6210 /* Debug */,
@@ -364,7 +364,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		03CCC3812B652461006B6210 /* Build configuration list for PBXNativeTarget "Test" */ = {
+		03CCC3812B652461006B6210 /* Build configuration list for PBXNativeTarget "Networking Testing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				03CCC3822B652461006B6210 /* Debug */,
