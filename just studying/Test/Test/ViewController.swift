@@ -33,12 +33,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        networkManager.getAllPosts { posts in
+//        networkManager.getAllPosts { posts in
+//            DispatchQueue.main.async {
+//                self.posts = posts
+//            }
+//        }
+        
+        networkManager.getPostsBy(userId: 3)  { posts in
             DispatchQueue.main.async {
                 self.posts = posts
             }
         }
     }
+    
+    
     @IBAction func createPost(_ sender: Any) {
         
         var post = Post(userId: 2, id: 1, title: "Time to write", body: "Wwerwerwerd fsdfsfdsf sdfsdfrewr sdsfdg s")

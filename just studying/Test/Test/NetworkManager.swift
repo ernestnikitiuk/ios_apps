@@ -74,7 +74,7 @@ class NetworkManager {
         
     }
     
-    func getPostsBy(userId: Int, completionHandler: ([Post]) -> Void ){
+    func getPostsBy(userId: Int, completionHandler: @escaping ([Post]) -> Void ){
         guard let url = URL(string: baseURL + APIs.posts.rawValue) else { return }
         
         var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
@@ -92,7 +92,7 @@ class NetworkManager {
                 
                 completionHandler(posts ?? [])
             }
-        }
+        }.resume()
         
     }
 }
