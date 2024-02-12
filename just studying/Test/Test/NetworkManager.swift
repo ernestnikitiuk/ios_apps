@@ -46,7 +46,7 @@ class NetworkManager {
               let data = try? JSONEncoder().encode(post) else {
             return
         }
-        
+    
         //let request = MutableURLRequest(url: url)
         //request.httpMethod = HTTPMethod.POST.rawValue
         var request = URLRequest(url: url)
